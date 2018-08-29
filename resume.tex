@@ -1,0 +1,316 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+
+% \titlespacing{\section}{0pt}{50pt}{10pt}
+% \setlist{}
+% \setlength{}
+
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+	\item{
+		\vspace{-2pt}
+    	\textbf{#1: \\}
+		\vspace{-2pt} 
+		\begin{itemize} 
+            #2
+		\end{itemize}
+	}
+}
+
+\newcommand{\resumeItemDetail}[1]
+{
+    \item \small{ #1 \vspace{-2pt} }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeEducation}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+	  % \hspace{5pt} \textit{\small#5}\\ % GPA
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumePublication}[3]{
+    \vspace{-1pt}
+    \item{
+        \vspace{-2pt}
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+            \textbf{#1} & #2 \\
+        \end{tabular*}\vspace{-5pt}
+        \vspace{-2pt}
+        \begin{itemize} 
+            \vspace{-2pt}
+                #3
+        \end{itemize}\vspace{-10pt}
+    }
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[label={},leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeSubheadingList}[1]
+{
+    \begin{itemize}[label={},leftmargin=*]
+        #1
+    \end{itemize}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeItemList}[1]
+{
+    \begin{itemize}
+        #1
+    \end{itemize}\vspace{-5pt}
+}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    {\Large Ting-Hsiang Wang} & Email : \href{mailto:thwang1231@gmail.com}{thwang1231@gmail.com}\\
+    & Mobile : +886 988-089-724
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubheadingList
+  {
+	\resumeEducation
+      {University of Illinois at Urbana-Champaign}{Illinois, USA}
+	  {Bachelor of Science in Mathematics and Computer Science}{Fall 2008 - Fall 2013}
+	  % {Overall GPA$:$ $2.79/4.00$}
+  }
+
+%-----------PUBLICATION-----------------
+\section{Publication}
+\resumeSubheadingList
+{
+    \resumePublication{ICE: Item Concept Embedding via Textual Information}{SIGIR 2017}
+    {
+        \resumeItemDetail{Accepted to the 40th International ACM SIGIR Conference as a regular paper.}
+    }
+    \resumePublication{Superhighway: Bypass Data Sparsity in Cross-Domain Collaborative Filtering}{RecSys 2018}
+    {
+        \resumeItemDetail{Accepted to the 12th ACM Conference on Recommender Systems as a poster paper.}
+    }
+    \resumePublication{Item Concept Network: Towards Concept-based Item Representation Learning}{Submitted}
+    {
+		\resumeItemDetail{Submitted to the IEEE Transactions on Knowledge and Data Engineering as a journal paper.}
+    }
+}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Academia Sinica}{Taipei, Taiwan (R.O.C)}
+      {Research Assistant}{Aug. 2017 - Present}
+      \resumeItemListStart
+        \resumeItem{Research on Network Embedding}
+        {
+		    \resumeItemDetail{Collaboratively developed network embedding framework (proNet) which was released on the github for large-scale network embedding and simulation of different kinds of embedding algorithm including matrix-factorization based methods, random walk based methods, SkipGram based methods...etc.}
+		    \resumeItemDetail{Developed a factorization based method to modeling user sequential behavior for user clustering analysis.}
+		    \resumeItemDetail{Developed random walk based network embedding methods for building various kinds of recommender systems.}
+        }
+      \resumeItemListEnd
+    \resumeSubheading
+      {KKBOX Taiwan Co.,Ltd}{Taipei, Taiwan (R.O.C)}
+      {Data Researcher Intern}{Apr. 2017 - Present}
+      \resumeItemListStart
+        \resumeItem{Recommendation System Development}
+        {
+            \resumeItemDetail{Developed a random-walk based representation learning model for recommendation system}
+            \resumeItemDetail{Developed a centrality based sample strategy for random walk based representation learning model with dynamic walking length, walking style and sample times.}
+            \resumeItemDetail{Developed a network construction algorithm with random-walk based network embedding algorithm for cross-market recommendation which doubled the offline performance of recommender system.}
+        }
+      \resumeItemListEnd
+    \resumeSubheading
+      {Cathay United Bank}{Taipei, Taiwan (R.O.C)}
+      {Data Researcher Intern}{Aug. 2017 - Present}
+      \resumeItemListStart
+        \resumeItem{Customer Journey Modeling}
+        {
+            \resumeItemDetail{Analyzed transaction records up to 2017 from 5 kinds of channels to the scale of 10TB via data visualization with Elastic Search.}
+		    \resumeItemDetail{Processed customer journey data and extracted critical features based on the analysis.}
+		    \resumeItemDetail{Utilized gradient boosting tree model to build a ranking-based decision model for credit card customer churn prediction.}
+		    \resumeItemDetail{Developed a end-to-end system for rapid deployment for non-technical personnels in data analysis on customer journey data.}
+            \resumeItemDetail{Developed a large-scale learning algorithm for modeling users' sequential behavior which facilitated 10\% enhancement in terms of AUC for customer churn prediction.}
+        }
+      \resumeItemListEnd
+    \resumeSubheading
+      {R.O.C Army Aviation and Special Forces Command}{Taoyuan, Taiwan (R.O.C)}
+      {Paratrooper}{Sept. 2015 - Sept. 2016}
+      \resumeItemListStart
+        \resumeItem{Receiving Foreign Ambassadors}
+        {
+            \resumeItemDetail{Welcomed the foreign ambassadors with our president.}
+        }
+        \resumeItem{Perform Drill Show in National Celebration}
+        {
+		    \resumeItemDetail{Performed drill show on national celebration days such as national day, new year's day and presidential inauguration.}
+        }
+        \resumeItem{Guarding National Revolutionary Martyr's Shrine}
+        {
+		    \resumeItemDetail{Guarded martyr's shrine to honor the great people in our country.}
+        }
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {LEADERG Inc.}{Taipei, Taiwan (R.O.C)}
+      {Software Engineer Intern}{Jul. 2014 - Apr. 2015}
+      \resumeItemListStart
+        \resumeItem{Online Prototyping Platform}
+        {
+          \resumeItemDetail{Developed an online prototyping tool, solved problem of curvature rendering latency on web based platform by developing a asynchronous strategy for mesh rendering in different resolution and precisely calculation by A/B test.}
+        }
+        \resumeItem{Cloud Drive}
+        {
+		    \resumeItemDetail{Developed a personal Cloud Drive device's user interface for accessing the device directly, and integrated with online cloud drive such as google drive and dropbox.}
+		    \resumeItemDetail{Designed a database structure for interaction between device users data sharing scheme and simulating social network. }
+        }
+        \resumeItem{Web Development}
+        {
+		  \resumeItemDetail{Integrated front-end and back-end of websites including various function such as online payment, shopping cart, profile management, newsletter subscription.}	
+        }
+      \resumeItemListEnd
+	\resumeSubHeadingListEnd
+
+%-----------Open Source Project-----------------
+\section{Open Source Project}
+  \resumeSubHeadingListStart
+    \resumeItem{proNet-Core}
+    {
+          \resumeItemDetail{ \href{https://github.com/cnclabs/proNet-core}{https://github.com/cnclabs/proNet-core}}
+          \resumeItemDetail{Implemented state-of-the-art network embedding algorithms including LINE, DeepWalk, etc.}
+          \resumeItemDetail{Developed the function of loading pre-train model for further research on online learning.}
+    }
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Selected Course Project}
+  \resumeSubHeadingListStart
+    \resumeItem{Special Topics on Computer Science(95/100) - Novel Remaking Prediction}
+    {
+        {Built a crawler for crawling movies and novels data from Amazon and IMDb. (Around 14GB)}
+	    {Performed text processing, including parsing, segmentation and tokenization for sentiment analysis}
+	    {Trained a binary classifier via support vector machine by processed features and ground truths for predicting novel remaking.}
+    }
+  \resumeSubHeadingListEnd
+
+%%-----------ACHIEVEMENT-----------------
+%\section{Achievement}
+%  \resumeSubHeadingListStart
+%	\resumeSubheading
+%		{NASA Space App Hackthon}{Taiwan (R.O.C)}
+%		{Judges' list Award}{Apr. 2017}
+%	\resumeSubheading
+%		{Taiwan Hackthon 4th}{Taiwan (R.O.C)}
+%		{Best Popularity Award}{Feb. 2015}
+%	\resumeSubheading
+%		{Living Lab Testing Service Awards}{Taiwan (R.O.C)}
+%		{1st Place Award}{Jan. 2014}
+%  \resumeSubHeadingListEnd
+\section{Activities}
+  \resumeSubHeadingListStart
+	\resumeSubheading
+		{Taiwan Data Science Foundation}{Taiwan (R.O.C)}
+		{Volunteer}{Nov. 2017}
+      \resumeItemListStart
+		\resumeItem{Taiwan Artificial Intelligence and Data Science Conference}
+        {
+		    \resumeItemDetail{Managed conference provisions and logistics.}
+		    \resumeItemDetail{Designed and arranged the layout of reception area.}
+        }
+      \resumeItemListEnd
+%	\resumeSubheading
+%		{Waker Organization}{Nepal}
+%		{Voluntary Teacher}{Aug.-Sept. 2014}
+%      \resumeItemListStart
+%        \resumeItem{Courses of science and technologies}
+%          {Designed and taught a series of courses related to science and technologies including mathematics, physics and chemistry for children in Nepal.}
+%      \resumeItemListEnd
+    \resumeSubheading
+      {Student Association of department of computer science}{Taipei, Taiwan (R.O.C)}
+      {Director of Department of Activity Organization}{Sept. 2012 - Sept. 2014}
+      \resumeItemListStart
+        \resumeItem{Orientation Camp}
+        {
+            \resumeItemDetail{Coordinates students from other departments for the union orientation camp for freshman.}
+		    \resumeItemDetail{Led a 100 people scaled group to organize the orientation camp for freshman from two departments.}
+        }
+		\resumeItem{Computer Science Summer Camp}
+        {
+		    \resumeItemDetail{Led a 100 people scaled group to organize the computer science camp for high school students.}
+		    \resumeItemDetail{Designed the process of activities and the content of courses related to computer science for the summer camp.}
+        }
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%%%--------PROGRAMMING SKILLS------------
+\section{Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: C++, Python, Java, Javascript, Bash Script, PHP, HTML, CSS}
+	}
+	\item{
+      \textbf{Technologies}{:  Network Embedding, Recommendation System, Natural Language Processing, Information Retrieval, AWS, IBM Bluemix, Web Application}
+    }
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
